@@ -1,4 +1,4 @@
-# Sql-Intro
+# Sql-Intro jasoya8836@djpich.com/SV5vGeFa43bpdxU
 Sql Structured query Language 
 
 Database is Structured data for fast retrieval by a pc
