@@ -22,3 +22,8 @@ ORDER BY
   
 ##########
 SELECT * FROM Census;
+
+Data Types - INTEGER, FLOAT, DECIMAL, VARCHAR, and BOOLEAN.
+DECIMAL(precision, scale) - Scale is the count of digits to the right of the decimal point.
+                            Precision is the total count of digits in the number
+  
