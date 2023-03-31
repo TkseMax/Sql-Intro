@@ -93,5 +93,59 @@ NO ACTION: this keyword can mean different actions depending on a dialect. In My
 ALTER TABLE employees
 ADD CONSTRAINT fk_department FOREIGN KEY (department_id)
 REFERENCES departments(department_id);
-    
+###################################################
+JetBrain Eg:
+
+CREATE TABLE video_games (
+	id INT Primary key,
+    name varchar(50),
+    game_genre varchar(45),
+    game_developer varchar(50),
+    release_date date
+); 
+
+CREATE TABLE game_developers (
+	id INT Primary key,
+    name varchar(50),
+    address varchar(55),
+    state varchar(50),
+    city varchar(50),
+    country varchar(50)
+);  
+
+CREATE TABLE platforms (
+	id INT Primary key,
+    name varchar(50),
+    company_id varchar(55),
+    company varchar(50),
+    release_date date,
+    original_price DECIMAL(9,2)
+);  
+
+CREATE TABLE platforms_games (
+	game_id INT,
+    platform_id INT,
+    platform_name varchar(50),
+    PRIMARY kEY (game_id, platform_id, platform_name),
+	FOREIGN KEY (game_id) REFERENCES video_games(id),
+    FOREIGN KEY (platform_id) REFERENCES platforms(id)
+);  
+
+CREATE TABLE characters (
+	id INT Primary key,
+    name varchar(50),
+    birthday date,
+    gender DECIMAL(2,1),
+    info varchar(50)
+);  
+
+CREATE TABLE games_characters (
+	character_id INT,
+    character_name varchar(50),
+    game_id INT,
+    PRIMARY KEY (character_id, character_name, game_id),
+    FOREIGN KEY (character_id) REFERENCES characters(id),
+    FOREIGN KEY (gamesss_id) REFERENCES video_games(id)
+);  
+################################################################
     
